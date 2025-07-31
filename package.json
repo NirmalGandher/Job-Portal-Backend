@@ -1,0 +1,25 @@
+{
+    "name": "job-portal-backend",
+    "version": "1.0.0",
+    "description": "{\r \"name\": \"job-portal-backend\",\r \"version\": \"1.0.0\",\r \"description\": \"Backend for Job Portal using Node.js and Express\",\r \"main\": \"server.js\",\r \"scripts\": {\r \"start\": \"node server.js\",\r \"dev\": \"nodemon server.js\"\r },\r \"author\": \"Sanjay Kumar\",\r \"license\": \"MIT\",\r \"dependencies\": {\r \"cors\": \"^2.8.5\",\r \"dotenv\": \"^16.3.1\",\r \"express\": \"^4.18.2\",\r \"mongoose\": \"^7.6.1\"\r },\r \"devDependencies\": {\r \"nodemon\": \"^3.0.3\"\r }\r }",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^3.0.2",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.1",
+        "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.16.4"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}

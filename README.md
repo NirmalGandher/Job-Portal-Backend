@@ -1,0 +1,21 @@
+{
+"name": "job-portal-backend",
+"version": "1.0.0",
+"description": "Backend for Job Portal using Node.js and Express",
+"main": "server.js",
+"scripts": {
+"start": "node server.js",
+"dev": "nodemon server.js"
+},
+"author": "Sanjay Kumar",
+"license": "MIT",
+"dependencies": {
+"cors": "^2.8.5",
+"dotenv": "^16.3.1",
+"express": "^4.18.2",
+"mongoose": "^7.6.1"
+},
+"devDependencies": {
+"nodemon": "^3.0.3"
+}
+}
