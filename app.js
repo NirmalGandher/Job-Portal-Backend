@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 
+// Routes
 import authRoute from "./routes/authRoute.js";
 import jobRoute from "./routes/jobRoute.js";
 import jobApplicationRoutes from "./routes/jobApplicationRoute.js";
@@ -12,16 +13,16 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
+// Middlewares
 app.use(cors());
-app.use(express.json()); // Parse JSON bodies
+app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoute);
 app.use("/api/jobs", jobRoute);
 app.use("/api/applications", jobApplicationRoutes);
 
-// Connect to MongoDB (only once)
+// MongoDB connection
 let isConnected = false;
 async function connectDB() {
     if (!isConnected) {
@@ -39,5 +40,13 @@ async function connectDB() {
 }
 connectDB();
 
-// Export the app for Vercel serverless deployment
+// Local development only
+if (process.env.NODE_ENV !== 'production') {
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`🚀 Server is running on port ${port}`);
+    });
+}
+
+// Export for Vercel
 export default app;
